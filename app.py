@@ -1,5 +1,9 @@
 import streamlit as st
 
+st.title('Medical Insurance Demo')
+
+st.markdown('Please input your data and we\'ll give you a prediction of your medical insurance charge.')
+
 with st.form("form"):
 	# age (18, 64)
 	age = st.slider('Age', 18, 64)
