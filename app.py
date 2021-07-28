@@ -18,9 +18,11 @@ with st.form("form"):
     # children (0, 5)
     children = st.slider("Children number", 0, 5)
     # smoker (y, n)
-    smoker = st.selectbox("Are you a smoker?", ("yea", "nah"))
+    smoker = st.selectbox("Are you a smoker?", ("yes", "no"))
     # region (southeast, southwest, other)
-    region = st.selectbox("Select a region", ("southeast", "southwest", "other"))
+    region = st.selectbox(
+        "Select a region", ("northeast", "northwest", "southeast", "southwest")
+    )
     # charges
 
     submitted = st.form_submit_button("Submit")
