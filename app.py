@@ -14,7 +14,11 @@ with st.form("form"):
     # sex (m, f)
     sex = st.selectbox("Sex", ("m", "f"))
     # bmi (16, 53.1)
-    bmi = st.slider("BMI", 16, 54)
+
+    height = st.slider("height (cm)", 100, 210)
+    weight = st.slider("weight (Kg)", 20, 160)
+
+    # bmi = st.slider("BMI", 16, 54)
     # children (0, 5)
     children = st.slider("Children number", 0, 5)
     # smoker (y, n)
@@ -28,5 +32,8 @@ with st.form("form"):
     submitted = st.form_submit_button("Submit")
 
     if submitted:
+        bmi = weight / (height / 100) ** 2
         cost = getCost(age, sex, bmi, children, smoker, region)
-        st.write("You will have to pay ", f"${cost}")
+        st.write(
+            "You would have to pay ", f"${round(cost,2)}", "dollars for your insurance."
+        )
