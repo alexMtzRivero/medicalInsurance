@@ -1,4 +1,4 @@
-# Penguins web app deployed on Heroku
+# Industrial_Machine_Learning
 
 Check out the YouTube video showing the development of this web app at https://youtu.be/zK4Ch6e1zq8
 
@@ -12,4 +12,3 @@ The web app was built in Python using the following libraries:
 * numpy
 * scikit-learn
 * pickle
-# Industrial_Machine_Learning
